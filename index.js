@@ -5,7 +5,7 @@ module.exports = (opts = { baseValue: 16 }) => {
   // Work with options here
 
   return {
-    postcssPlugin: 'postcss-rem-to-px',
+    postcssPlugin: 'postcss-rem-recalibrate',
     Declaration (decl) {
       const unit = 'px'
       decl.value = decl.value.replace(/"[^"]+"|'[^']+'|url\([^)]+\)|(-?\d*\.?\d+)rem/g, (match, p1) => {
